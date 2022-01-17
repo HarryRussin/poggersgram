@@ -101,7 +101,7 @@ function Post(props) {
                 </p>
 
                 {props.caption.length > 100 ?
-                    <p className='mt-1'>{showmore ? <span>{props.caption} <span onClick={() => setshowmore(!showmore)} className='italic ml-1 text-sm text-blue-400'>show less</span></span>
+                    <p className='mt-1 break-words'>{showmore ? <span>{props.caption} <span onClick={() => setshowmore(!showmore)} className='italic ml-1 text-sm text-blue-400'>show less</span></span>
                         : <span>{props.caption.substring(0, 50)}... <span onClick={() => setshowmore(!showmore)} className='italic ml-1 text-sm text-blue-400'>show more</span></span>
                     }</p>
                     : <p className='mt-1'>{props.caption}</p>
